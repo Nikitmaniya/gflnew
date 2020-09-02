@@ -1,0 +1,15 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getSlaveIds`(IN groupId integer)
+BEGIN
+
+WITH RECURSIVE category_path (user_id) AS
+(
+  SELECT user_id
+    FROM user
+    WHERE user_head_id = 25
+  UNION ALL
+  SELECT c.user_id
+    FROM category_path AS cp JOIN user AS c
+      ON cp.user_id = c.user_head_id
+)
+select * from quality where created_by IN (select user_id from category_path ORDER BY user_id);
+END

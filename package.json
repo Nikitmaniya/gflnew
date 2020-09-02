@@ -1,0 +1,23 @@
+{
+  "name": "server_project",
+  "version": "1.0.0",
+  "description": "Server Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.5.0",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "mysql": "github:mysqljs/mysql",
+    "mysql-ssh": "^1.0.6",
+    "nodemon": "^1.19.4",
+    "tunnel-ssh": "^4.1.4"
+  }
+}

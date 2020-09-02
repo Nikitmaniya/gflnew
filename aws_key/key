@@ -1,0 +1,1 @@
+ssh -i "GloryTraning.pem" ec2-user@ec2-13-234-17-138.ap-south-1.compute.amazonaws.com
