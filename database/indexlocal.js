@@ -119,7 +119,7 @@ var connection = sql.createConnection({
 global.responseGenerator = responseGenerator;
 global.middleware = middleware;
 
-app.set('port', (process.env.PORT || 8200))
+app.set('port', (process.env.PORT || 8100))
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({
