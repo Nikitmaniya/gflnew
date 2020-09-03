@@ -120,7 +120,7 @@ global.connection = connection;
 global.responseGenerator = responseGenerator;
 global.middleware = middleware;
 
-app.set('port', (process.env.PORT || 8100))
+app.set('port', (process.env.PORT || 4500))
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({
@@ -158,8 +158,8 @@ const options = {
 //   https.createServer(options, function (req, res) {
 // 	res.writeHead(200);
 // 	res.end("hello world\n");
-//   }).listen(8100);  
+//   }).listen(4500);  
 
   const httpsServer = https.createServer(options, app);
   
-httpsServer.listen(8100, 'localhost');
+httpsServer.listen(4500, 'localhost');
