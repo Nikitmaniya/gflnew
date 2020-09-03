@@ -55,6 +55,7 @@ var connection = sql.createConnection({
 	user: 'root',
 	password: '1234',
 	database: 'gfldata',
+	waitForConnections : true,
 	timeout: 60000000
 
 		//for aws 
