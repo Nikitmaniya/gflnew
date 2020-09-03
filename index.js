@@ -53,8 +53,8 @@ var connection = sql.createConnection({
 	host: 'localhost',
 	port: 3306,
 	user: 'root',
-	password: '',
-	database: 'gfl',
+	password: '1234',
+	database: 'gfldata',
 	timeout: 60000000
 
 		//for aws 
