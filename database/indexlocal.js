@@ -49,22 +49,20 @@ var connection = sql.createConnection({
 // 	//       //  connect_timeout :10000,
 
 	// local sql server
-	host: 'localhost',
-	port: 3306,
-	user: 'root',
-	password: '1234',
-	database: 'gfldata',
-	waitForConnections : true,
-	timeout: 60000000
+	// host: 'localhost',
+	// user: 'root',
+	// password: 'Rootuser',
+	// database: 'gfl_schema',
+	// timeout: 60000000
 	
 
 	//for aws 
 	
-	// host: 'Mysql@localhost:3306@ec2-13-234-17-138.ap-south-1.compute.amazonaws.com',
-	// user: 'root',
-	// password: 'gloryTech@@',
-	// database: 'gfl_schema',
-	// timeout: 60000000
+	host: 'Mysql@localhost:3306@ec2-13-234-17-138.ap-south-1.compute.amazonaws.com',
+	user: 'root',
+	password: 'gloryTech@@',
+	database: 'gfl_schema',
+	timeout: 60000000
 });
 
 
@@ -119,7 +117,7 @@ var connection = sql.createConnection({
 global.responseGenerator = responseGenerator;
 global.middleware = middleware;
 
-app.set('port', (process.env.PORT || 4500))
+app.set('port', (process.env.PORT || 8100))
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({
