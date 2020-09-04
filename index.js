@@ -8,7 +8,6 @@ var morgan = require('morgan')
 var tunnel = require('tunnel-ssh');
 var cors = require('cors')
 // let config = require('./config');
-const https = require('https');
 const fs = require('fs');
 
 //to import routes
@@ -146,19 +145,6 @@ app.use('/', productionPlanningRoutes);
 
 app.use('/', soundRoutes);
 
-// app.listen(app.get('port'), function () {
-// 	console.log("Node app is running at localhost:" + app.get('port'))
-// })
-
-const options = {
-	key: fs.readFileSync('key.pem'),
-	cert: fs.readFileSync('cert.pem')
-  };
-
-//   https.createServer(options, function (req, res) {
-// 	res.writeHead(200);
-// 	res.end("hello world\n");
-//   }).listen(8100);  
-
-  const httpsServer = https.createServer(options, app);
-httpsServer.listen(8100, 'localhost');
+app.listen(app.get('port'), function () {
+	console.log("Node app is running at localhost:" + app.get('port'))
+})
