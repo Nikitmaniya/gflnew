@@ -119,7 +119,7 @@ global.connection = connection;
 global.responseGenerator = responseGenerator;
 global.middleware = middleware;
 
-app.set('port', (process.env.PORT || 8100))
+app.set('port', (process.env.PORT || 8200))
 
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({
